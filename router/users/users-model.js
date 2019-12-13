@@ -1,7 +1,7 @@
 const db = require('../../database/db-config.js');
 
-const find = (department) => {
-	return db('users').where({ department });
+const find = () => {
+	return db('users');
 }
 
 const findBy = (filter) => {
@@ -17,6 +17,10 @@ const add = async (user) => {
 	return findById(id);
 }
 
+const remove = (id) => {
+	return db('users').where({ id }).del();
+}
+
 module.exports = {
-	find, findBy, findById, add
+	find, findBy, findById, add, remove
 }
