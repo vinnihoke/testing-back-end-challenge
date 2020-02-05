@@ -22,4 +22,4 @@ module.exports = knex(knexConfig.development);
 
 // After editing that file
 
-// pnpx knex seed:run
+// pnpx knex seed:run 
