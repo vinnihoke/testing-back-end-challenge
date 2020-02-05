@@ -5,7 +5,6 @@ exports.up = function (knex) {
 			column.increments();
 			column.string('username', 128).notNullable().unique()
 			column.string('password', 128).notNullable()
-			column.string('department', 30).notNullable()
 		})
 };
 
